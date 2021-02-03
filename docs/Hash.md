@@ -1,0 +1,34 @@
+<a name="module_Hash"></a>
+
+## Hash
+Handles different string hashing mechanisms
+
+
+* [Hash](#module_Hash)
+    * [.md5(string)](#module_Hash.md5) ⇒ <code>string</code>
+    * [.sha256(string)](#module_Hash.sha256) ⇒ <code>string</code>
+
+<a name="module_Hash.md5"></a>
+
+### Hash.md5(string) ⇒ <code>string</code>
+Get the MD5 of a string
+
+**Kind**: static method of [<code>Hash</code>](#module_Hash)  
+**Returns**: <code>string</code> - The MD5 of the string  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| string | <code>string</code> | The string |
+
+<a name="module_Hash.sha256"></a>
+
+### Hash.sha256(string) ⇒ <code>string</code>
+Get the SHA 256 hash of a string
+
+**Kind**: static method of [<code>Hash</code>](#module_Hash)  
+**Returns**: <code>string</code> - The MD5 of the string  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| string | <code>string</code> | The string |
+
