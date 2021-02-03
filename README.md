@@ -26,4 +26,4 @@ const {
 } = require('@janiscommerce/crypt');
 ```
 
-See the [full documentation](/docs.md) for usage details.
+See the [full documentation](/docs/README.md) for usage details.
