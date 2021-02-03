@@ -14,4 +14,16 @@ npm install @janiscommerce/crypt
 
 ## :hammer: Usage
 
-Pending documentation
+There are 5 groups of functionalities in this module. You can require each one of them this way:
+
+```js
+const {
+	Base64,
+	Encription,
+	Hash,
+	Random,
+	UUID
+} = require('@janiscommerce/crypt');
+```
+
+See the [full documentation](/docs.md) for usage details.
