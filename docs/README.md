@@ -5,7 +5,7 @@ Run `npm run docs` to regenerate it. -->
 See documentation for each module:
 
 - [Base64](Base64.md)
-- [Encription](Encription.md)
+- [Encryption](Encryption.md)
 - [Hash](Hash.md)
 - [Random](Random.md)
 - [UUID](UUID.md)

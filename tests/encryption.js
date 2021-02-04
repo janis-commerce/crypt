@@ -2,9 +2,9 @@
 
 const assert = require('assert');
 
-const { Encription } = require('../lib');
+const { Encryption } = require('../lib');
 
-describe('Encription', () => {
+describe('Encryption', () => {
 
 	const plainTextString = 'Hi there, I am a test';
 	const encodedStringWithAES128 = '26ffc79ef45a8d6ff461cf3fa6ff8b67b7545347d3b5d18d904a2c85d4ec08f5';
@@ -13,12 +13,12 @@ describe('Encription', () => {
 
 	describe('algorithms getter', () => {
 
-		it('Should return an object with the encription algorithms enum', () => {
-			assert(Encription.algorithms);
-			assert.strictEqual(typeof Encription.algorithms, 'object');
-			assert.strictEqual(Encription.algorithms.AES128, 'AES128');
-			assert.strictEqual(Encription.algorithms.AES192, 'AES192');
-			assert.strictEqual(Encription.algorithms.AES256, 'AES256');
+		it('Should return an object with the encryption algorithms enum', () => {
+			assert(Encryption.algorithms);
+			assert.strictEqual(typeof Encryption.algorithms, 'object');
+			assert.strictEqual(Encryption.algorithms.AES128, 'AES128');
+			assert.strictEqual(Encryption.algorithms.AES192, 'AES192');
+			assert.strictEqual(Encryption.algorithms.AES256, 'AES256');
 		});
 
 	});
@@ -26,17 +26,17 @@ describe('Encription', () => {
 	describe('unsafeEncrypt()', () => {
 
 		it('Should resolve the encripted string using AES128 by default', async () => {
-			const encriptedString = await Encription.unsafeEncrypt(plainTextString);
+			const encriptedString = await Encryption.unsafeEncrypt(plainTextString);
 			assert.strictEqual(encriptedString, encodedStringWithAES128);
 		});
 
 		it('Should resolve the encripted string using a AES192 algorithm if passed as param', async () => {
-			const encriptedString = await Encription.unsafeEncrypt(plainTextString, Encription.algorithms.AES192);
+			const encriptedString = await Encryption.unsafeEncrypt(plainTextString, Encryption.algorithms.AES192);
 			assert.strictEqual(encriptedString, encodedStringWithAES192);
 		});
 
 		it('Should resolve the encripted string using a AES256 algorithm if passed as param', async () => {
-			const encriptedString = await Encription.unsafeEncrypt(plainTextString, Encription.algorithms.AES256);
+			const encriptedString = await Encryption.unsafeEncrypt(plainTextString, Encryption.algorithms.AES256);
 			assert.strictEqual(encriptedString, encodedStringWithAES256);
 		});
 
@@ -45,17 +45,17 @@ describe('Encription', () => {
 	describe('unsafeDecrypt()', () => {
 
 		it('Should resolve the plain text string using AES128 by default', async () => {
-			const decriptedString = await Encription.unsafeDecrypt(encodedStringWithAES128);
+			const decriptedString = await Encryption.unsafeDecrypt(encodedStringWithAES128);
 			assert.strictEqual(decriptedString, plainTextString);
 		});
 
 		it('Should resolve the plain text string using a AES192 algorithm if passed as param', async () => {
-			const decriptedString = await Encription.unsafeDecrypt(encodedStringWithAES192, Encription.algorithms.AES192);
+			const decriptedString = await Encryption.unsafeDecrypt(encodedStringWithAES192, Encryption.algorithms.AES192);
 			assert.strictEqual(decriptedString, plainTextString);
 		});
 
 		it('Should resolve the plain text string using a AES256 algorithm if passed as param', async () => {
-			const decriptedString = await Encription.unsafeDecrypt(encodedStringWithAES256, Encription.algorithms.AES256);
+			const decriptedString = await Encryption.unsafeDecrypt(encodedStringWithAES256, Encryption.algorithms.AES256);
 			assert.strictEqual(decriptedString, plainTextString);
 		});
 

@@ -19,7 +19,7 @@ There are 5 groups of functionalities in this module. You can require each one o
 ```js
 const {
 	Base64,
-	Encription,
+	Encryption,
 	Hash,
 	Random,
 	UUID

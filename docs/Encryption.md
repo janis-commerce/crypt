@@ -2,36 +2,36 @@
 
 Run `npm run docs` to regenerate it. -->
 
-<a name="module_Encription"></a>
+<a name="module_Encryption"></a>
 
-## Encription
-Handles string encription and decription
+## Encryption
+Handles string encryption and decription
 
 
-* [Encription](#module_Encription)
-    * [.algorithms](#module_Encription.algorithms)
-    * [.unsafeEncrypt(plainTextString, [algorithm])](#module_Encription.unsafeEncrypt) ⇒ <code>Promise.&lt;string&gt;</code>
-    * [.unsafeDecrypt(encryptedString, [algorithm])](#module_Encription.unsafeDecrypt) ⇒ <code>Promise.&lt;string&gt;</code>
+* [Encryption](#module_Encryption)
+    * [.algorithms](#module_Encryption.algorithms)
+    * [.unsafeEncrypt(plainTextString, [algorithm])](#module_Encryption.unsafeEncrypt) ⇒ <code>Promise.&lt;string&gt;</code>
+    * [.unsafeDecrypt(encryptedString, [algorithm])](#module_Encryption.unsafeDecrypt) ⇒ <code>Promise.&lt;string&gt;</code>
 
-<a name="module_Encription.algorithms"></a>
+<a name="module_Encryption.algorithms"></a>
 
-### Encription.algorithms
+### Encryption.algorithms
 A key-value of the available algorithms: `AES128`, `AES192` and `AES256`.
 
-**Kind**: static property of [<code>Encription</code>](#module_Encription)  
+**Kind**: static property of [<code>Encryption</code>](#module_Encryption)  
 **Read only**: true  
 **Example**  
 ```js
-doSomething(Encription.algorithms.AES128);
+doSomething(Encryption.algorithms.AES128);
 ```
-<a name="module_Encription.unsafeEncrypt"></a>
+<a name="module_Encryption.unsafeEncrypt"></a>
 
-### Encription.unsafeEncrypt(plainTextString, [algorithm]) ⇒ <code>Promise.&lt;string&gt;</code>
-Encrypts a string using an encription algorithm and returns it in hex string format.
+### Encryption.unsafeEncrypt(plainTextString, [algorithm]) ⇒ <code>Promise.&lt;string&gt;</code>
+Encrypts a string using an encryption algorithm and returns it in hex string format.
 
 **IMPORTANT**: This method is not cryptographically secure. It uses a fixed non-random salt and initialization vector.
 
-**Kind**: static method of [<code>Encription</code>](#module_Encription)  
+**Kind**: static method of [<code>Encryption</code>](#module_Encryption)  
 **Returns**: <code>Promise.&lt;string&gt;</code> - Encrypted string in hex format  
 
 | Param | Type | Default | Description |
@@ -39,14 +39,14 @@ Encrypts a string using an encription algorithm and returns it in hex string for
 | plainTextString | <code>string</code> |  | String to encrypt |
 | [algorithm] | <code>algorithms</code> | <code>this.algorithms.AES128</code> | Algorithm to use for encrypt the string |
 
-<a name="module_Encription.unsafeDecrypt"></a>
+<a name="module_Encryption.unsafeDecrypt"></a>
 
-### Encription.unsafeDecrypt(encryptedString, [algorithm]) ⇒ <code>Promise.&lt;string&gt;</code>
+### Encryption.unsafeDecrypt(encryptedString, [algorithm]) ⇒ <code>Promise.&lt;string&gt;</code>
 Decrypts a previously encrypted string with the specified algorithm
 
 **IMPORTANT**: This method is not cryptographically secure. It uses a fixed non-random salt and initialization vector
 
-**Kind**: static method of [<code>Encription</code>](#module_Encription)  
+**Kind**: static method of [<code>Encryption</code>](#module_Encryption)  
 **Returns**: <code>Promise.&lt;string&gt;</code> - Decrypted hex string  
 
 | Param | Type | Default | Description |
